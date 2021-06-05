@@ -537,6 +537,7 @@ func GenerateEnums(t *template.Template, types []TypeDefinition) (string, error)
 				TypeName:     tp.TypeName,
 				ValueWrapper: wrapper,
 			})
+			break
 		}
 	}
 	err := t.ExecuteTemplate(w, "constants.tmpl", c)

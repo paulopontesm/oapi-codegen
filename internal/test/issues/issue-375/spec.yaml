@@ -1,0 +1,31 @@
+openapi: 3.0.3
+paths:
+  /:
+    get:
+      responses:
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotWorking"
+components:
+  schemas:
+    NotWorking:
+      title: NotWorking
+      type: object
+      description: This is not working.
+      properties:
+        anything:
+          type: array
+          items:
+            type: object
+            properties:
+              testing:
+                type: string
+                enum:
+                  - test1
+                  - test2
+            required:
+              - testing
+      required:
+        - anything
